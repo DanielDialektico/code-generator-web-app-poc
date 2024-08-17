@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header img.logo {
+    max-height: 80px;
+    margin-right: 20px;
+}
+
+h1 {
+    color: #333;
+    margin: 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%; /* Cambia el ancho del formulario al 25% */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%; /* Asegura que el select ocupe todo el ancho del contenedor */
+    padding: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-start;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 18px;
+    color: green;
+}
