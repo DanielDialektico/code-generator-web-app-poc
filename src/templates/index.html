@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <img src="/static/logo.png" alt="Logo de la Empresa" class="logo">
+    </header>
+     
+    <h1>Code Generator</h1>
+    <br>
+    <form action="/generate_code/" method="post" class="form-container">
+        <div class="form-group">
+            <label for="division_code">División:</label>
+            <select name="division_code" id="division_code">
+                {% for option in division_options %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="area_code">Área:</label>
+            <select name="area_code" id="area_code">
+                {% for option in area_options %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="doc_code">Documento:</label>
+            <select name="doc_code" id="doc_code">
+                {% for option in doc_options %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit" style="font-weight: bold; font-size: 17px;">Generate Code</button>
+    </form>
+
+    {% if generated_code %}
+        <p>Code Generated: <strong>{{ generated_code }}</strong></p>
+    {% endif %}
+</body>
+</html>
